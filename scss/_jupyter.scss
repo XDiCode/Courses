@@ -1,0 +1,19 @@
+body {
+  max-width: 744px !important;
+  padding: 2rem 0.5rem 2rem 0 !important;
+}
+.jp-Cell {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.jp-RenderedHTMLCommon {
+  padding-right: 0 !important;
+}
+@media screen and (min-width: 641px) {
+  body {
+    padding: 3rem 1rem !important;
+  }
+}
+pre {
+  overflow-x: auto;
+}

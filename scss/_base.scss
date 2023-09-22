@@ -1,0 +1,44 @@
+// Mixins --------------------------------------
+@mixin hyphens-off {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+@mixin hyphens-on {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+// Resets --------------------------------------
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+body {
+  margin: auto;
+}
+p,
+li {
+  @include hyphens-on;
+}
+a {
+  @include hyphens-off;
+  word-break: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  span {
+    @include hyphens-off;
+    word-break: break-word;
+  }
+}

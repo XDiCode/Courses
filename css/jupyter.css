@@ -1,14 +1,57 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: auto;
+}
+
+p,
+li {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+a {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-break: break-word;
+}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-break: break-word;
+}
+
 body {
   max-width: 744px !important;
   padding: 2rem 0.5rem 2rem 0 !important;
 }
+
 .jp-Cell {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
+
 .jp-RenderedHTMLCommon {
   padding-right: 0 !important;
 }
+
 @media screen and (min-width: 641px) {
   body {
     padding: 3rem 1rem !important;
@@ -17,3 +60,5 @@ body {
 pre {
   overflow-x: auto;
 }
+
+/*# sourceMappingURL=jupyter.css.map */
