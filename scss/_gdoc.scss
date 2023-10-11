@@ -37,8 +37,12 @@ a:has(img):hover::after {
   right: 10px;
   border-radius: 0.2rem;
 }
-td,
-th {
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.table-wrapper td,
+.table-wrapper th {
   min-width: 120px;
 }
 ul li,
