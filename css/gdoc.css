@@ -118,6 +118,10 @@ ol + ol + ol + ol + ol li {
   margin-left: 90pt !important;
 }
 
+a {
+  color: "#1155cc" !important;
+}
+
 .table-of-contents {
   border-left: 5px solid lightgrey;
 }
