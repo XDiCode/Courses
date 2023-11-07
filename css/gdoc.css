@@ -93,31 +93,6 @@ a:has(img):hover::after {
   min-width: 120px;
 }
 
-ul li,
-ol li {
-  margin-left: 18pt !important;
-}
-
-ul + ul li,
-ol + ol li {
-  margin-left: 36pt !important;
-}
-
-ul + ul + ul li,
-ol + ol + ol li {
-  margin-left: 54pt !important;
-}
-
-ul + ul + ul + ul li,
-ol + ol + ol + ol li {
-  margin-left: 72pt !important;
-}
-
-ul + ul + ul + ul + ul li,
-ol + ol + ol + ol + ol li {
-  margin-left: 90pt !important;
-}
-
 a {
   color: #1155cc !important;
 }
