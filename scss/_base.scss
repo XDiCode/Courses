@@ -1,4 +1,30 @@
 // Mixins --------------------------------------
+
+// Media Queries
+@mixin phone-only {
+  @media screen and (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet-portrait-up {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+// Body
+@mixin body--responsive {
+  body {
+    max-width: 668px !important;
+    margin: auto;
+    padding: 2rem 0.75rem !important;
+    @include tablet-portrait-up {
+      padding: 3rem 1rem !important;
+    }
+  }
+}
+
+// Typography
 @mixin hyphens-off {
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -9,18 +35,68 @@
   -ms-hyphens: auto;
   hyphens: auto;
 }
+@mixin c-1155cc-force {
+  color: #1155cc !important;
+}
+
+// Images
+@mixin full-width--preserve-aspect-ratio {
+  max-width: 100%;
+  height: auto !important;
+}
+
+// Image Links
+@mixin link-to-image {
+  a:has(img) {
+    border: 1px solid transparent;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  a:has(img):hover {
+    border: 1px solid #bdc1c6;
+    //   -webkit-box-shadow: 0px 0px 10px 0px #454545;
+    //   box-shadow: 0px 0px 10px 0px #454545;
+  }
+  a:has(img):hover::after {
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg enable-background='new 0 0 512 512' version='1.1' viewBox='0 0 512 512' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23BFBFBF;%7D%0A%3C/style%3E%3Cpath class='st0' d='m416 208c0 45.9-14.9 88.3-40 122.7l126.6 126.7c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-126.6-126.7c-34.4 25.2-76.8 40-122.7 40-114.9 0-208-93.1-208-208s93.1-208 208-208 208 93.1 208 208zm-208 144c79.5 0 144-64.5 144-144s-64.5-144-144-144-144 64.5-144 144 64.5 144 144 144z'/%3E%3C/svg%3E%0A");
+    width: 1.4rem;
+    height: 1.4rem;
+    padding: 0.4rem;
+    background-color: #f1f3f4;
+    border: 1px solid #bdc1c6;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 0.2rem;
+  }
+}
+
+// Tables
+@mixin table-wrapper {
+  .table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .table-wrapper td,
+  .table-wrapper th {
+    min-width: 120px;
+  }
+}
+
 // Resets --------------------------------------
 * {
-  box-sizing: border-box;
   scroll-behavior: smooth;
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+// Typography --------------------------------------
+* {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-}
-body {
-  margin: auto;
 }
 p,
 li {
@@ -30,7 +106,6 @@ a {
   @include hyphens-off;
   word-break: break-word;
 }
-
 h1,
 h2,
 h3,
@@ -42,3 +117,26 @@ h6 {
     word-break: break-word;
   }
 }
+
+// Führt zu Komplikationen mit Nutzerinteraktion
+// Daher vorerst deaktiviert
+// ul li,
+// ol li {
+//   margin-left: 18pt !important;
+// }
+// ul + ul li,
+// ol + ol li {
+//   margin-left: 36pt !important;
+// }
+// ul + ul + ul li,
+// ol + ol + ol li {
+//   margin-left: 54pt !important;
+// }
+// ul + ul + ul + ul li,
+// ol + ol + ol + ol li {
+//   margin-left: 72pt !important;
+// }
+// ul + ul + ul + ul + ul li,
+// ol + ol + ol + ol + ol li {
+//   margin-left: 90pt !important;
+// }

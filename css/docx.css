@@ -52,12 +52,7 @@ a {
   color: #1155cc !important;
 }
 
-span:has(img) {
-  max-width: 100%;
-  height: auto !important;
-}
-
-img[style] {
+img {
   max-width: 100%;
   height: auto !important;
 }
@@ -96,4 +91,4 @@ a:has(img):hover::after {
   min-width: 120px;
 }
 
-/*# sourceMappingURL=gdoc.css.map */
+/*# sourceMappingURL=docx.css.map */

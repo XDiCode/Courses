@@ -2,10 +2,7 @@
 a {
   @include c-1155cc-force;
 }
-span:has(img) {
-  @include full-width--preserve-aspect-ratio;
-}
-img[style] {
+img {
   @include full-width--preserve-aspect-ratio;
 }
 @include link-to-image;
