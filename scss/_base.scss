@@ -101,7 +101,7 @@
 p,
 li {
   @include hyphens-on;
-  line-height: 1.4;
+  line-height: 1.4 !important;
 }
 a {
   @include hyphens-off;

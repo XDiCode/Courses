@@ -16,7 +16,7 @@ li {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  line-height: 1.4;
+  line-height: 1.4 !important;
 }
 
 a {
